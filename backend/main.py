@@ -1,8 +1,8 @@
 import os
+import math
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List, Optional
-import numpy as np
 import random
 import requests
 from fastapi.middleware.cors import CORSMiddleware
@@ -59,17 +59,16 @@ def get_osrm_matrix(locations):
             data = response.json()
             if "durations" in data:
                 # OSRM returns seconds. Convert to HOURS.
-                matrix_seconds = np.array(data["durations"])
-                return matrix_seconds / 3600.0
+                return [[d / 3600.0 for d in row] for row in data["durations"]]
     except Exception as e:
         print(f"OSRM Matrix Error: {e}")
     
     # Fallback to Euclidean
     n = len(locations)
-    matrix = np.zeros((n, n))
+    matrix = [[0.0] * n for _ in range(n)]
     for i in range(n):
         for j in range(n):
-            dist = np.sqrt((locations[i].lat - locations[j].lat)**2 + 
+            dist = math.sqrt((locations[i].lat - locations[j].lat)**2 + 
                            (locations[i].lng - locations[j].lng)**2) * 111.0
             matrix[i][j] = dist / 30.0 
     return matrix
