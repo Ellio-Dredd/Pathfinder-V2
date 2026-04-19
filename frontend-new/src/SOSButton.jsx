@@ -20,8 +20,9 @@ export default function SOSButton() {
 
     navigator.geolocation.getCurrentPosition(async (position) => {
       try {
-        // Calling your Python Microservice
-        const res = await axios.get(`http://localhost:8001/api/sos/nearby?lat=${position.coords.latitude}&lng=${position.coords.longitude}`);
+        const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+        // Route through the shared API domain
+        const res = await axios.get(`${API_BASE_URL}/api/sos/nearby?lat=${position.coords.latitude}&lng=${position.coords.longitude}`);
         
         if (res.data.providers.length === 0) {
           showError("No service stations found within a 5km radius.");
