@@ -22,6 +22,7 @@ if not GOOGLE_API_KEY:
     print("WARNING: GOOGLE_API_KEY is not set. SOS features will fail.")
 
 @app.get("/")
+@app.get("/api/sos")
 def home():
     return {"status": "Pathfinder SOS Service is Online"}
 

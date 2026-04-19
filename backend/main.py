@@ -24,6 +24,7 @@ if not GOOGLE_API_KEY:
     print("WARNING: GOOGLE_API_KEY is not set. Search and Discovery features will fail.")
 
 @app.get("/")
+@app.get("/api")
 def home():
     return {"status": "Pathfinder Main API is Online"}
 
