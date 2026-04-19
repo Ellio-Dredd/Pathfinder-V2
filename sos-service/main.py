@@ -21,6 +21,10 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
     raise ValueError("CRITICAL: GOOGLE_API_KEY is not set in the .env file!")
 
+@app.get("/")
+def home():
+    return {"status": "Pathfinder SOS Service is Online"}
+
 # --- MATHEMATICAL HELPER FUNCTIONS ---
 
 def calculate_distance(lat1, lon1, lat2, lon2):

@@ -20,6 +20,10 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
     raise ValueError("CRITICAL: GOOGLE_API_KEY is not set in the .env file!")
 
+@app.get("/")
+def home():
+    return {"status": "Pathfinder Main API is Online"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
