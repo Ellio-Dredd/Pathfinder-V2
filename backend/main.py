@@ -16,8 +16,16 @@ from fastapi import Request
 load_dotenv()
 
 app = FastAPI()
-OSRM_BASE_URL = os.getenv("OSRM_BASE_URL", "http://localhost:5000")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+OSRM_BASE_URL = os.getenv("OSRM_BASE_URL", "http://localhost:5000")
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
@@ -27,14 +35,6 @@ if not GOOGLE_API_KEY:
 @app.get("/api")
 def home():
     return {"status": "Pathfinder Main API is Online"}
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # --- DATA MODELS ---
 class Location(BaseModel):
