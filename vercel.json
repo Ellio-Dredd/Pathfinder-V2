@@ -16,7 +16,11 @@
       "dest": "sos-service/main.py"
     },
     {
-      "src": "/api/(.*)",
+      "src": "/api/sos",
+      "dest": "sos-service/main.py"
+    },
+    {
+      "src": "/(.*)",
       "dest": "backend/main.py"
     }
   ]
