@@ -1,27 +1,16 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "backend/main.py",
-      "use": "@vercel/python"
+      "source": "/api/sos/(.*)",
+      "destination": "/api/sos"
     },
     {
-      "src": "sos-service/main.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/sos/(.*)",
-      "dest": "/sos-service/main.py"
+      "source": "/api/sos",
+      "destination": "/api/sos"
     },
     {
-      "src": "/api/sos",
-      "dest": "/sos-service/main.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/backend/main.py"
+      "source": "/(.*)",
+      "destination": "/api"
     }
   ]
 }
