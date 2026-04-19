@@ -33,7 +33,7 @@ export default function SOSButton() {
         setProviders(res.data.providers.slice(0, 3));
         setIsModalOpen(true);
       } catch (err) { 
-        showError("SOS Service Offline. Please check if Port 8001 is running.");
+        showError("SOS Service Offline. Please check if Port 8000 is running.");
       }
       setLoading(false);
     }, () => {
