@@ -19,7 +19,7 @@ app.add_middleware(
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
-    raise ValueError("CRITICAL: GOOGLE_API_KEY is not set in the .env file!")
+    print("WARNING: GOOGLE_API_KEY is not set. SOS features will fail.")
 
 @app.get("/")
 def home():

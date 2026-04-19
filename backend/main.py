@@ -18,7 +18,7 @@ OSRM_BASE_URL = os.getenv("OSRM_BASE_URL", "http://localhost:5000")
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
-    raise ValueError("CRITICAL: GOOGLE_API_KEY is not set in the .env file!")
+    print("WARNING: GOOGLE_API_KEY is not set. Search and Discovery features will fail.")
 
 @app.get("/")
 def home():
