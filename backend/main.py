@@ -22,12 +22,7 @@ if not GOOGLE_API_KEY:
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000", # Keep for CRA compatibility
-        "http://localhost:5173", # Standard Vite port
-        "http://localhost:5174",
-        "https://pathfinderlk.netlify.app/"  # Your current Vite port
-    ],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
