@@ -26,7 +26,7 @@ if not GOOGLE_API_KEY:
 def home():
     return {"status": "Pathfinder SOS Service is Online"}
 
-# --- MATHEMATICAL HELPER FUNCTIONS ---
+# --- MATHEMATICAL HELPER FUNCTIONS bg---
 
 def calculate_distance(lat1, lon1, lat2, lon2):
     """Calculates distance between two GPS coordinates using Haversine formula (in km)"""

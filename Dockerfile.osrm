@@ -1,0 +1,16 @@
+# Use the official OSRM backend image
+FROM osrm/osrm-backend:latest
+
+# Create a data directory
+WORKDIR /data
+
+# Copy all the processed OSRM data files into the container
+# This includes the .osrm, .osrm.edges, .osrm.geometry, etc.
+COPY ./osrm-data/ /data/
+
+# Expose the default OSRM port
+EXPOSE 5000
+
+# Start the OSRM routed engine with the Multi-Level Dijkstra (MLD) algorithm
+# Note: We use sri-lanka-latest.osrm which is your processed map file
+CMD ["osrm-routed", "--algorithm", "mld", "/data/sri-lanka-latest.osrm"]
