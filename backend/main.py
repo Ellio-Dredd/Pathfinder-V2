@@ -421,7 +421,7 @@ def search_places(q: str):
                 "name": p.get("displayName", {}).get("text"),
                 "display_name": p.get("formattedAddress"),
                 "lat": p.get("location", {}).get("latitude"), # Number
-                "lng": p.get("location", {}).get("longitude")  # Number
+                "lng": p.get("location", {}).get("longitude")  # Number ..
             })
         return results
     except Exception as e:
