@@ -1,0 +1,159 @@
+﻿BSc Project Screening Form: Guidelines
+
+Part 1 – Project Proposal
+
+Student Name
+Arandara Kankanamalage Don Yasas Chamikara Arandara
+
+Student Number
+2526304
+
+Degree Pathway (course)
+BSc. Computer Science
+
+Supervisor Name
+Dr. Yasas Jayaweera
+
+Title of Project
+Pathfinder: A Context-Aware Route Optimization and Dynamic Assistance Services System.
+
+Abstract of the project
+
+The proposed application is to develop a "Context-Aware Route Optimizing and assistance system " delivered via an intelligent web application. The standard mapping applications do not support to critical, real-world constraints, such as arriving at a business place before it closes or meeting a fixed appointment. This application will solve this by calculating the best optimal route that includes multiple destinations and will address the problem of wasted time and frustration that are associated with poor manual planning. Unlike standard navigation apps, this system’s uniqueness lies in its multi-faceted constraint driven approach. For daily errands and tourist planning which helps tourist to find the most attractive tourist destinations and plan the trip along with it by finding the best route that covers all those destinations. It automatically determines the best possible sequence by solving a complex version of Traveling Salesperson Problem with Time Windows. Which means this application will actively considers rules like business hours, fixed appointments and task dependencies. For drivers needing immediate help, it offers intelligent roadside assistance by dynamically finding and ranking nearby service providers based on location, status and rating. This system will be developed as a modern web application with the use of custom-built AI optimization algorithm and third-party APIs which will be helpful in gathering real time and context-awareness data for algorithm’s decision making. The proposed application will be beneficial for boosting productivity for daily planners, maximizing experience for tourist and provide rapid and reliable options for drivers in distress. This proposed application will ensure a simplified, intelligent approach to both complex planning and real-time assistance.
+
+
+
+
+Project deliverables
+
+Software 
+A Web Application 
+
+Reports 
+Contextual Report 
+Thesis report 
+Reflective Report 
+Design document
+
+
+
+
+
+
+Description of your artefact
+Travelling is an important aspect of the people’s lives, for tourism, livelihood or personal purposes. In the present people often rely on google maps (GoogleMaps, 2023) and other solutions such as petal maps,( petal maps,2020) apple maps or other third-party solutions. The problem encountered was the lack of solution to find the best & optimal route that consist of all the given destinations. In this proposed project “Pathfinder”, users can enter the multiple destinations they want to go to, then the “Pathfinder” will automatically plan the journey by considering the shortest distance and shortest time spent form the stating point to all the destinations and also succeeding the critical, real-world time constraints, minimizing the hassle for users to plan the journey manually, saving time and cost for the journey. This solution is consist of two modes as “Daily Planer mode” and “Tourism mode”, “Daily Planer mode” is focused on daily activities while “Tourism mode” is focused on vacation trips with required options. (Algorithms for Context-Awareness Route Generation, 2021)
+
+Aim – The aim of this project is to develop a context-aware Web Application System that provides optimised route for multiple daily errands and tourist planning alongside intelligent roadside assistance.
+Objectives –
+To research and design a system architecture for solving the Traveling Salesman Problem with Time window constraints and dynamic, real-time service finding.
+To implement AI optimization engines, capable of finding the a near optimal routes in the daily errand and tourist planning modes.
+To implement ranking algorithm for the roadside assistant feature prioritizing service providers based on available distance, operational status and user ratings  
+To integrate third party Api’s to fetch and supply the optimization engine and all application modes with real-world data.
+To test and validate the system’s effectiveness and user friendliness to ensure the daily planner, Tourist itinerary and Roadside assistance features are feasible and efficient 
+Features
+User management
+Daily Planner Mode -AI-optimized errand routes with constraints.
+Tourist Itinerary Mode - Optimized tourist plans maximizing attractions
+Roadside Assistance Mode -Real-time assistance ranking nearby help
+User friendly Interfaces
+Availability and Performance.
+
+
+
+Risk analysis
+Risk 
+Impact
+Likelihood
+Mitigation Action
+
+Algorithmic Complexity
+High
+likely
+ Developing the project in a modular way by starting from bassline algorithm. 
+
+External API Dependencies
+Medium
+likely
+Using and “API wrapper” for easy swappable independent service 
+
+Inaccurate Constraint Data
+Medium
+likely
+By giving user, the final ability to manually check time constraints 
+
+
+
+User-friendly interface
+Medium 
+likely
+Design prototypes and conduct usability test 
+
+
+
+How does your project relate to your degree course and build upon the units/knowledge you have studied/acquired 
+This project directly uses and integrates important information from the Computer Science degree, putting theoretical ideas into practice. It requires the implementation of complex AI optimization algorithms to solve the core TSPT-W routing problem and the dynamic ranking for roadside assistance. Building the full-stack web application utilizes software engineering principles and the project's essential "context-aware" features rely on skills in integrating third-party API learned in web development technology units. Also to manage user data necessitates applying knowledge of database design and management. After successful completion of the project will help to grow skills and knowledge more so that it will be easy for to work on the real filed. 
+
+Resources required in developing the artefact
+Software / Development Platforms 
+JavaScript
+Python 
+VS Code
+Tools 
+GitHub/Git
+SQL
+Frameworks
+Fast API
+React
+
+
+Have you completed & submitted your ethics form?
+
+YES
+NO
+
+If the project is a development of previous work by yourself or others, give details below. Failing to declare such previous work here may be treated as an academic offence 
+
+
+
+
+Supervisor Signature: 
+
+
+
+
+
+
+Part 2 – List of relevant resources
+
+
+ 
+Journal Papers
+Bladimir Toaza and Domokos Esztergár-Kiss (2024). Assessment of the activity scheduling optimization method using real travel data. Transportation. doi:https://doi.org/10.1007/s11116-023-10456-3.
+
+Jin, Y., Ding, Y., Pan, X., He, K., Zhao, L., Qin, T., Song, L. and Bian, J. (2023). Pointerformer: Deep Reinforced Multi-Pointer Transformer for the Traveling Salesman Problem. Proceedings of the AAAI Conference on Artificial Intelligence, 37(7), pp.8132–8140. doi:https://doi.org/10.1609/aaai.v37i7.25982.
+
+Gavalas, D., Konstantopoulos, C., Mastakas, K. and Pantziou, G. (2014). A survey on algorithmic approaches for solving tourist trip design problems. Journal of Heuristics, 20(3), pp.291–328. doi:https://doi.org/10.1007/s10732-014-9242-5.
+‌
+
+FIXEL: TOPSIS-Driven Mobile Application for Roadside Assistance Provider Decision Making. (2024). Journal of Computing Research and Innovation, 9(2). doi:https://doi.org/10.24191/jcrinn.v9i2.431.
+
+
+
+Web Sites with relevant information
+ Google, 2025. Google Places API Documentation. [Online] Available at: https://developers.google.com/maps/documentation/places/web-service [Accessed 25 October 2025].
+
+Project OSRM, 2025. Open Source Routing Machine (OSRM). [Online] Available at: http://project-osrm.org/ [Accessed 25 October 2025].
+
+The React Team, 2025. React - A JavaScript library for building user interfaces. [Online] Available at: https://react.dev/ [Accessed 25 October 2025]
+
+Leaflet, 2025. Leaflet - an open-source JavaScript library for mobile-friendly interactive maps. [Online] Available at: https://leafletjs.com/ [Accessed 26 October 2025]
+
+Relevant software
+
+Visual Studio Code 
+Node.js
+Python
+Docker
+Azure 
+
+
