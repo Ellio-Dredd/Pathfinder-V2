@@ -7,7 +7,10 @@ import random
 import requests
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
-from genetic_solver import GeneticRouteOptimizer
+try:
+    from genetic_solver import GeneticRouteOptimizer
+except ImportError:
+    from .genetic_solver import GeneticRouteOptimizer
 from fastapi import Request
 
 load_dotenv()
